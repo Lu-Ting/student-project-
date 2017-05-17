@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{thesis-ccu}
+\usepackage{graphicx}
+\usepackage{wallpaper} %浮水印
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{algorithm,algorithmic}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage{url}		%為了reference 網站
+\usepackage{fancyheadings}  %頁碼
+\usepackage{miniplot}
+
+
+%設定中英文的字型
+\setCJKmainfont{標楷體}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+
+%%封面---------------------------------------------------------------------------------------
+\dissertation
+\author{吳律廷}
+\degree{Doctor of Philosophy} \department{電機工程研究所} \school{國立中正大學}
+\student{\vspace{-0.1in}研究生：吳律廷}
+\studenteng{Student: Lu-Ting Wu}
+\advisor{指導教授：林惠勇博士}
+\advisoreng{Advisor: Dr. Huei-Yung Lin}
+\thesistype{\vspace{0in}國立中正大學工學院\\ 電機工程研究所\\ 碩士論文}
+\thesistypeeng{A Thesis\\ Submitted to\\ Institute of Electrical
+  Engineering\\ College of Engineering\\ National Chung Cheng University\\
+  in Partial Fulfillment of the Requirements\\ for the Degree of\\ Master\\
+  in\\ Electrical Engineering\\ July 2017\\ Chiayi, Taiwan, Republic of
+  China}
+\title{車用輔助駕駛系統之超車偵測}
+\titleeng{A}
+%%-------------------------------------------------------------------------------------------
+
+
+%%摘要---------------------------------------------------------------------------------------
+\begin{document}
+%\maketitle
+\setlength{\baselineskip}{24pt} %for double space
+\pagestyle{prelim} %puts roman numerals at bottom
+
+\CenterWallPaper{0.3}{Figure/wallpaper.eps}	
+
+\abs{摘要}
+\begin{abstract}
+場景辨識與即時定位一直是自主機器人應用的主要研究方向，尤其應用在自主機器人導航車載系統上。
+本論文提出一套新穎的合併影像內容資訊與特徵點資訊的場景辨識與即時定位方法。
+此方法由兩大部分組合而成：建構環境拓樸地圖以及影像檢索與定位。
+我們基於全方位影像偵測節點訊息、建構環境拓撲地圖，並且在節點間進行影像檢索與定位。
+利用增強型凸包編碼(Extended-HCT)與特徵點擷取的方式，自動偵測出環境中劇烈場景變化處，
+將這些變化處視為有意義的節點並建構拓樸地圖。
+接著合併影像色彩空間資訊與SURF特徵點匹配方法，在自行建立的圖資進行影像檢索與定位，建構即時影像檢索系統。
+在實驗方面，我們設計一套車載導航輔助即時系統，可即時驗證目前行進路線是否正確，
+並減少系統計算負擔與降低影像搜尋時間，實現本論文基於影像的導航輔助系統的目標。
+
+
+\end{abstract}
+
+\abs{Abstract}
+\begin{abstract}
+Scene recognition and localization are important research topics for driver assistance technology and autonomous mobile robot in recent years.
+In this thesis, we present a novel system which is able to detect the node information and construct the topological map based on omnidirectional image sequences. 
+We use the node information for image retrieval and localization among the nodes in the topological map. 
+For the topological map construction, we utilize the Extended-HCT method and feature extraction. 
+We also combine both the content-based and feature-based image retrieval techniques for image retrieval and localization in the real scene image dataset. 
+By using the proposed approach, we are able to construct a real-time image retrieval system for navigation assistance, and verify the correctness of the route. 
+The experiments carried out on our dataset demonstrate that the proposed approach improves the conventional image retrieval methods.
+\end{abstract}
+%%-------------------------------------------------------------------------------------------
+\end{document}
